@@ -6,9 +6,11 @@ const Header = () => {
     <div className="w-screen h-20 flex flex-row bg-yellow-300 items-center px-5 ">
       <section id="left-part" className="flex flex-row">
         <div className="w-10 h-10 bg-blue-700 rounded-md flex justify-center items-center">
-          <p className="text-white font-extrabold">&lt;&gt;</p>
+          <p className="text-white font-extrabold scale-y-[1.5] translate-y-[-2px]">
+            &lt;&gt;
+          </p>
         </div>
-        <h2>SabaDev</h2>
+        <h2 className="h-10 ml-3 translate-y-1.5 font-bold text-lg">SabaDev</h2>
       </section>
       <section id="theme-language-toggle">
         <img src={moon} alt="symbol of moon" className="w-4 h-4" />
