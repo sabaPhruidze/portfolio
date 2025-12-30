@@ -1,5 +1,10 @@
+import Introduction from "../components/home/Introduction";
 const Home = () => {
-  return <div>Home</div>;
+  return (
+    <div>
+      <Introduction />
+    </div>
+  );
 };
 
 export default Home;
