@@ -3,7 +3,7 @@ import moon from "../../assets/moon.png";
 import menu from "../../assets/menu.png";
 const Header = () => {
   return (
-    <div className="w-screen h-20 flex flex-row bg-yellow-300 items-center px-5 justify-between">
+    <div className="w-screen h-20 flex flex-row bg-white items-center px-5 justify-between">
       <section id="left-part" className="flex flex-row">
         <div className="w-10 h-10 bg-blue-700 rounded-md flex justify-center items-center shadow-md shadow-blue-200">
           <p className="text-white font-extrabold scale-y-[1.5] translate-y-[-2px]">
