@@ -78,7 +78,7 @@ const Introduction = () => {
           </div>
         </div>
 
-        <div className="w-45 h-20 shadow-xl shadow-dark rounded-xl flex flex-row items-center justify-between px-5 ">
+        <div className="w-45 h-20 shadow-xl shadow-dark rounded-xl flex flex-row items-center justify-between px-5 mt-15">
           <div className="">
             <div className="flex flex-row items-end">
               <p className="font-bold text-gray-300 text-sm mr-1">
