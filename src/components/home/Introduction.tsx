@@ -6,7 +6,7 @@ import progress from "../../assets/growth.png";
 import checkmark from "../../assets/checkmark.png";
 const Introduction = () => {
   return (
-    <div className="w-full h-250 bg-gray-300 py-full px-10">
+    <div className="w-full h-250 bg-gray-300 py-20 px-10">
       <section id="top">
         <div className="flex flex-row items-center bg-gray-400 p-2 rounded-full w-55 mb-5">
           <div className="w-2 h-2 animate-pulse bg-blue-800 rounded-full mr-2 translate-y-0.25" />
@@ -78,20 +78,29 @@ const Introduction = () => {
           </div>
         </div>
 
-        <div>
-          <div>
-            <div>
-              <p>PERFORMANCE</p>
+        <div className="w-45 h-20 shadow-xl shadow-dark rounded-xl flex flex-row items-center justify-between px-5 ">
+          <div className="">
+            <div className="flex flex-row items-end">
+              <p className="font-bold text-gray-300 text-sm mr-1">
+                PERFORMANCE
+              </p>
               <img
                 src={progress}
                 alt="progress icon"
                 className="w-4 h-4 rounded-full"
               />
             </div>
-            <div></div>
-            <div>
-              <p>Optimization</p>
-              <p>98%</p>
+            <div className="mt-3">
+              <div className="w-full h-2 bg-gray-200 overflow-hidden rounded-full">
+                <div className="h-full w-[90%] bg-blue-600 rounded-full"></div>
+              </div>
+            </div>
+
+            <div className="flex flex-row items-center">
+              <p className="font-bold text-gray-300 text-sm mr-1">
+                Optimization
+              </p>
+              <p className="font-bold"> 98%</p>
             </div>
           </div>
         </div>
