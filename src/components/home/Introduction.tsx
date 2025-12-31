@@ -6,7 +6,7 @@ import progress from "../../assets/growth.png";
 import checkmark from "../../assets/checkmark.png";
 const Introduction = () => {
   return (
-    <div className="w-full h-250 bg-gray-300 py-25 px-10">
+    <div className="w-full h-250 bg-gray-300 py-full px-10">
       <section id="top">
         <div className="flex flex-row items-center bg-gray-400 p-2 rounded-full w-55 mb-5">
           <div className="w-2 h-2 animate-pulse bg-blue-800 rounded-full mr-2 translate-y-0.25" />
@@ -34,42 +34,50 @@ const Introduction = () => {
             Contact Me
           </button>
         </div>
-        <div>
-          <img
-            src={character1}
-            alt="An animated person with glasses coding"
-            className="w-4 h-4 rounded-full"
-          />
-          <img
-            src={character2}
-            alt="An animated person with glasses coding"
-            className="w-4 h-4 rounded-full"
-          />
-          <img
-            src={character3}
-            alt="An animated person with glasses coding"
-            className="w-4 h-4 rounded-full"
-          />
+        <div className="flex flex-row w-70  justify-between relative items-center h-12 mt-15">
+          <div>
+            <img
+              src={character2}
+              alt="An animated person with glasses coding"
+              className="w-12 h-12 rounded-full absolute top-0 left-7"
+            />
+            <img
+              src={character1}
+              alt="An animated person with glasses coding"
+              className="w-12 h-12 rounded-full absolute top-0 left-14"
+            />
+            <img
+              src={character3}
+              alt="An animated person with glasses coding"
+              className="w-12 h-12 rounded-full "
+            />
+          </div>
           <div>
             <strong>20+ Projects</strong>
-            <p>Delivered succesfully</p>
+            <p className="text-gray-500 font-semibold">Delivered succesfully</p>
           </div>
         </div>
       </section>
-      <section id="bottom">
-        <div>
-          <div>
-            <img
-              src={checkmark}
-              alt="check mark"
-              className="w-4 h-4 rounded-full"
-            />
+      <section
+        id="bottom"
+        className="w-full h-80 bg-white mt-15 rounded-xl p-10 shadow-xl shadow-dark"
+      >
+        <div className="flex justify-end">
+          <div className="w-45 h-20 shadow-xl shadow-dark rounded-xl flex flex-row items-center justify-between px-5 animate-[bounce_3s_infinite]">
+            <div className="w-8 h-8 rounded-full bg-green-200 flex justify-center items-center">
+              <img
+                src={checkmark}
+                alt="check mark"
+                className="w-5 h-5 rounded-full"
+              />
+            </div>
             <div>
-              <p>System Status</p>
-              <p>Operational</p>
+              <p className="font-bold text-gray-300 text-sm">System Status</p>
+              <p className="font-bold text-green-600">Operational</p>
             </div>
           </div>
         </div>
+
         <div>
           <div>
             <div>
