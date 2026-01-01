@@ -3,7 +3,7 @@ import Skills from "../components/home/Skills";
 import About from "../components/home/About";
 const Home = () => {
   return (
-    <div>
+    <div className="select-none">
       <Introduction />
       <Skills />
       <About />
