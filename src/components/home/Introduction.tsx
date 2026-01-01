@@ -9,7 +9,7 @@ const Introduction = () => {
     <div className="w-full h-250 bg-gray-300 py-20 px-10">
       <section id="top">
         <div className="flex flex-row items-center bg-gray-400 p-2 rounded-full w-55 mb-5">
-          <div className="w-2 h-2 animate-pulse bg-blue-800 rounded-full mr-2 translate-y-0.25" />
+          <div className="w-2 h-2 animate-pulse bg-blue-800 rounded-full mr-2 translate-y-px" />
           <p className="text-blue-700 font-bold text-sm">
             {" "}
             Open to new opportunities
