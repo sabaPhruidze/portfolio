@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 const Skills = () => {
   const items = [...skillsData, ...skillsData];
   return (
-    <section className="w-full h-50 flex flex-col items-center">
+    <section className="w-full h-35 flex flex-col items-center">
       <h2 className="font-bold text-gray-500 mt-5">
         POWERING EXPERIENCES WITH
       </h2>
