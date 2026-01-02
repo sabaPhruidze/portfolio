@@ -21,9 +21,9 @@ const About = () => {
     },
   ];
   return (
-    <section className="w-full h-300 bg-gray-300 py-20 px-10">
-      <div className="w-full h-250 bg-white rounded-xl px-5">
-        <div className="flex flex-row items-center pt-5">
+    <section className="w-full h-300 bg-gray-300 py-20 px-10 ">
+      <div className="w-full h-250 bg-white rounded-xl px-5 xl:max-w-7xl xl:mx-auto">
+        <div className="flex flex-row items-center pt-5 xl:justify-center">
           <img src={user} alt="user icon" className="w-5 h-5 mr-3" />
           <h2 className="font-bold text-blue-600"> ABOUT ME</h2>
         </div>

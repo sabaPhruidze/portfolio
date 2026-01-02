@@ -40,7 +40,7 @@ const Proficiency = () => {
   ];
   return (
     <section className="w-full h-150 bg-white ">
-      <div className="px-5">
+      <div className="w-full px-5 xl:max-w-7xl xl:mx-auto">
         <h2 className="font-bold text-2xl mt-10">Technical Proficinecy</h2>
         <p className="text-gray-500 font-semibold text-sm">
           My preferred tools for building modern applications
@@ -53,13 +53,17 @@ const Proficiency = () => {
           </button>
         </div>
       </div>
-      <div className="w-full h-100 flex flex-wrap my-10 justify-center">
+      <div className="w-full h-100 flex flex-wrap my-10 justify-center ">
         {data.map((item) => (
           <div
             key={item.id}
-            className="w-30 h-30 border border-gray-200 mx-5 flex justify-center items-center flex-col rounded-xl"
+            className="w-30 h-30 border border-gray-200 mx-5 flex justify-center items-center flex-col rounded-xl sm:w-45 sm:h-45"
           >
-            <img src={item.image} alt={item.name} className="w-8 h-8 mb-4 " />
+            <img
+              src={item.image}
+              alt={item.name}
+              className="w-8 h-8 mb-4 sm:w-16 sm:h-16"
+            />
             <h3 className="font-bold text-center">{item.name}</h3>
           </div>
         ))}
