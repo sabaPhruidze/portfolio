@@ -31,7 +31,7 @@ const About = () => {
           <h3 className="text-3xl mt-5 font-bold">
             Bridging the Gap between engineering and design
           </h3>
-          <p className="text-gray-500 mt-5">
+          <p className="text-gray-500 mt-5 md:w-160">
             I'm a passionate developer with over 3 years of experience in
             building digital products. I specialize in the JavaScript ecosystem
             but love exploring new technologies . My goal is to create software
@@ -44,12 +44,12 @@ const About = () => {
           {data.map((items) => (
             <div
               key={items.id}
-              className="w-25 h-25 bg-gray-200 flex flex-col px-3 rounded-xl"
+              className="w-full h-25 bg-gray-200 flex flex-col px-3 mr-3 rounded-xl  sm:h-35 sm:justify-center sm:flex sm:items-center"
             >
-              <h4 className="text-blue-500 text-2xl font-bold mb-2">
+              <h4 className="text-blue-500 text-xl font-bold mb-2 sm:text-2xl">
                 {items.title}
               </h4>
-              <p className="text-gray-500 font-semibold text-sm">
+              <p className="text-gray-500 font-semibold text-sm sm:text-md">
                 {items.content}
               </p>
             </div>

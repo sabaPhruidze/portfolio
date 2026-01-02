@@ -6,7 +6,7 @@ import progress from "../../assets/growth.png";
 import checkmark from "../../assets/checkmark.png";
 const Introduction = () => {
   return (
-    <div className="w-full h-250 bg-gray-300 py-20 px-10">
+    <div className="w-full h-250 bg-gray-300 py-20 px-10 flex flex-col md:items-center">
       <section id="top">
         <div className="flex flex-row items-center bg-gray-400 p-2 rounded-full w-55 mb-5">
           <div className="w-2 h-2 animate-pulse bg-blue-800 rounded-full mr-2 translate-y-px" />
@@ -21,7 +21,7 @@ const Introduction = () => {
         <h2 className="text-2xl font-bold mt-2">
           React.js & React native developer
         </h2>
-        <p className="text-gray-500 mt-4 ">
+        <p className="text-gray-500 mt-4 sm:w-150">
           Building accessible, pixel-perfect, and performant web experiences . I
           bridge the gap between design and engineering with a focus on user
           experience
@@ -60,7 +60,7 @@ const Introduction = () => {
       </section>
       <section
         id="bottom"
-        className="w-full h-80 bg-white mt-15 rounded-xl p-10 shadow-xl shadow-dark"
+        className="w-full h-80 bg-white mt-15 rounded-xl p-10 shadow-xl shadow-dark md:w-170"
       >
         <div className="flex justify-end">
           <div className="w-45 h-20 shadow-xl shadow-dark rounded-xl flex flex-row items-center justify-between px-5 animate-[bounce_3s_infinite]">
