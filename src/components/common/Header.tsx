@@ -1,5 +1,5 @@
 import moon from "../../assets/moon.png";
-import menu from "../../assets/menu.png";
+import DropDownMenu from "./DropDownMenu";
 const Header = () => {
   return (
     <header className="w-full h-20 flex flex-row bg-white items-center px-5 justify-between">
@@ -23,7 +23,7 @@ const Header = () => {
           <p className="text-gray-500 font-bold">KA</p>
         </div>
         <div className="h-10 w-10 bg-gray-300 rounded-md flex justify-center items-center">
-          <img src={menu} alt="symbol of menu" className="w-5 h-5 " />
+          <DropDownMenu />
         </div>
       </section>
     </header>

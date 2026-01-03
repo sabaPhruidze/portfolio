@@ -5,12 +5,14 @@ import { Suspense, lazy } from "react";
 
 function App() {
   const Home = lazy(() => import("./pages/Home"));
+  const About = lazy(() => import("./pages/About"));
   return (
     <BrowserRouter>
       <Header />
       <Suspense fallback={<p>იტვირთება...</p>}>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
         </Routes>
       </Suspense>
       <Footer />
