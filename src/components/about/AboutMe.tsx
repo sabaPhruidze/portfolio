@@ -1,6 +1,7 @@
 import user from "../../assets/user.png";
 import location from "../../assets/location.png";
 import correct from "../../assets/checkmark.png";
+import imageMain from "../../assets/image-main.png";
 const AboutMe = () => {
   return (
     <section className=" px-10 w-full h-300 bg-gray-300">
@@ -37,6 +38,17 @@ const AboutMe = () => {
             <p className="font-bold text-green-600">Open to Work</p>
           </div>
         </div>
+      </div>
+      <div
+        className="w-full h-90 rounded-xl mt-4 relative bg-cover bg-center border-white border-5"
+        style={{ backgroundImage: `url(${imageMain})` }}
+      >
+        <h3 className="absolute bottom-8 left-3 text-xl text-white font-bold">
+          Saba dev
+        </h3>
+        <p className="text-gray-100 text-sm absolute bottom-3 left-3 shadow-black">
+          Full Stack Developer
+        </p>
       </div>
     </section>
   );
