@@ -1,5 +1,6 @@
 import user from "../../assets/user.png";
-
+import location from "../../assets/location.png";
+import correct from "../../assets/checkmark.png";
 const AboutMe = () => {
   return (
     <section className=" px-10 w-full h-300 bg-gray-300">
@@ -21,6 +22,22 @@ const AboutMe = () => {
         a lifelong learner who thrives in environments that challenge me to
         grow.
       </p>
+      <div className="flex flex-row mt-10 justify-between w-auto">
+        <div className="w-40 h-30 bg-white flex flex-col px-3 pt-3 rounded-xl">
+          <h3 className="text-gray-500 text-sm font-semibold">location</h3>
+          <div className="flex flex-row items-center">
+            <img src={location} alt="location icon" className="w-8 h-8" />
+            <p className="font-bold">Tbilisi, Georgia</p>
+          </div>
+        </div>
+        <div className="w-40 h-30 bg-white flex flex-col px-3 pt-3 rounded-xl">
+          <h3 className="text-gray-500 text-sm font-semibold">Avaliability</h3>
+          <div className="flex flex-row items-center">
+            <img src={correct} alt="check icon" className="w-8 h-8" />
+            <p className="font-bold text-green-600">Open to Work</p>
+          </div>
+        </div>
+      </div>
     </section>
   );
 };
