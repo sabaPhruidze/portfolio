@@ -1,7 +1,10 @@
-import React from "react";
-
+import Experience from "../components/about/Experience";
 const About = () => {
-  return <div>About</div>;
+  return (
+    <div>
+      <Experience />
+    </div>
+  );
 };
 
 export default About;
