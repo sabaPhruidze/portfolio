@@ -1,28 +1,56 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import menu from "../../assets/menu.png";
 import * as NavigationMenu from "@radix-ui/react-navigation-menu";
 
 const DropDownMenu = () => {
+  const [value, setValue] = useState<string>(""); // გახსნა/დახურვის კონტროლი
+
+  const closeMenu = () => setValue("");
+
   return (
-    <NavigationMenu.Root className="relative z-10 flex w-screen justify-center">
-      <NavigationMenu.List className="center m-0 flex list-none rounded-md bg-white p-1 shadow-[0_2px_10px] shadow-blackA4">
-        <NavigationMenu.Item>
-          <NavigationMenu.Trigger className="group flex select-none items-center justify-between gap-0.5 rounded px-3 py-2 text-[15px] font-medium leading-none text-violet11 outline-none hover:bg-violet3 focus:shadow-[0_0_0_2px] focus:shadow-violet7">
+    <NavigationMenu.Root
+      value={value}
+      onValueChange={setValue}
+      className="relative"
+    >
+      <NavigationMenu.List className="m-0 list-none">
+        <NavigationMenu.Item value="main">
+          <NavigationMenu.Trigger className="h-10 w-10 bg-gray-300 rounded-md flex justify-center items-center outline-none cursor-pointer ">
             <img src={menu} alt="symbol of menu" className="w-5 h-5" />
           </NavigationMenu.Trigger>
 
-          <NavigationMenu.Content className="absolute left-0 top-0 w-full sm:w-auto">
-            <ul className="m-0 grid list-none gap-x-2.5 p-5.5 sm:w-150 sm:grid-flow-col sm:grid-rows-3">
-              <NavigationMenu.Link asChild>
-                <Link to="/">Home</Link>
-                <Link to="/about">About</Link>
-              </NavigationMenu.Link>
+          <NavigationMenu.Content className="p-2">
+            <ul className="m-0 list-none w-48">
+              <li>
+                <NavigationMenu.Link asChild>
+                  <Link
+                    to="/"
+                    onClick={closeMenu}
+                    className="block px-3 py-2 rounded-md font-semibold text-gray-800 hover:bg-gray-100"
+                  >
+                    Home
+                  </Link>
+                </NavigationMenu.Link>
+              </li>
+
+              <li className="mt-1">
+                <NavigationMenu.Link asChild>
+                  <Link
+                    to="/about"
+                    onClick={closeMenu}
+                    className="block px-3 py-2 rounded-md font-semibold text-gray-800 hover:bg-gray-100"
+                  >
+                    About
+                  </Link>
+                </NavigationMenu.Link>
+              </li>
             </ul>
           </NavigationMenu.Content>
         </NavigationMenu.Item>
       </NavigationMenu.List>
 
-      <NavigationMenu.Viewport />
+      <NavigationMenu.Viewport className="absolute right-0 top-full w-56 rounded-xl bg-white shadow-lg border border-gray-200 overflow-hidden" />
     </NavigationMenu.Root>
   );
 };

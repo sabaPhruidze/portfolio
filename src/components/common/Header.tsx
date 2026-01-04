@@ -22,9 +22,7 @@ const Header = () => {
           <div className="w-px h-5 bg-gray-400" />
           <p className="text-gray-500 font-bold">KA</p>
         </div>
-        <div className="h-10 w-10 bg-gray-300 rounded-md flex justify-center items-center">
-          <DropDownMenu />
-        </div>
+        <DropDownMenu />
       </section>
     </header>
   );
