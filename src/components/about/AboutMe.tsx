@@ -4,7 +4,7 @@ import correct from "../../assets/checkmark.png";
 import imageMain from "../../assets/image-main.png";
 const AboutMe = () => {
   return (
-    <section className=" px-10 w-full h-300 bg-gray-300">
+    <section className=" px-10 w-full h-250 bg-gray-300">
       <div className="flex flex-row pt-10 items-center">
         <img src={user} alt="user icon" className="w-5 h-5 mr-3" />
         <h2 className="font-semibold text-xl">About Me</h2>
