@@ -52,7 +52,7 @@ const WorkExperience = () => {
         </div>
         <div className="flex-1 flex flex-col px-10">
           {DATA.map((item) => (
-            <div className="flex flex-col w-full">
+            <div className="flex flex-col w-full" key={item.year}>
               <div
                 className={`bg-blue-100 rounded-md px-4 py-1 flex justify-center w-40 ${
                   item.year === "2022 - Present" ? "mt-0" : "mt-10"
@@ -73,7 +73,7 @@ const WorkExperience = () => {
               <div className="bg-gray-200 mt-10 rounded-xl p-5">
                 <p className="text-gray-600">{item.content}</p>
                 {item.additional?.map((add) => (
-                  <div className="flex flex-row items-start mt-3">
+                  <div className="flex flex-row items-start mt-3" key={add}>
                     <img
                       src={blueCheckMark}
                       alt="check mark"
@@ -84,7 +84,10 @@ const WorkExperience = () => {
                 ))}
                 <div className="flex flex-row gap-3 mt-3">
                   {item.tags.map((tag) => (
-                    <p className="text-gray-600 bg-white px-2 py-0.5 rounded-md">
+                    <p
+                      key={tag}
+                      className="text-gray-600 bg-white px-2 py-0.5 rounded-md"
+                    >
                       {tag}
                     </p>
                   ))}
