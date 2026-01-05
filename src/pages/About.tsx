@@ -11,6 +11,7 @@ const About = () => {
       <WorkExperience />
       <Education />
       <Ready />
+      <div className="w-full h-50 bg-gray-300" />
     </div>
   );
 };
