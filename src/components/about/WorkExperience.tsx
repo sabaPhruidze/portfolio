@@ -37,7 +37,7 @@ const WorkExperience = () => {
     },
   ];
   return (
-    <section className="w-full h-400 bg-white px-10">
+    <section className="w-full h-370 bg-white px-10">
       <div className="w-full h-10 flex flex-row items-center mt-10">
         <div className="w-10 h-10 bg-blue-200 rounded-md flex justify-center items-center mr-3">
           <img src={briefcase} alt="briefcase icon" className="w-6 h-6" />
