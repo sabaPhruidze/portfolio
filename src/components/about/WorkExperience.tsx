@@ -1,5 +1,5 @@
 import briefcase from "../../assets/briefcase.png";
-import blueCheckMark from "../../assets/blue_check_mark.jpg";
+import blueCheckMark from "../../assets/blue_check_mark.png";
 const WorkExperience = () => {
   const DATA = [
     {
@@ -37,7 +37,7 @@ const WorkExperience = () => {
     },
   ];
   return (
-    <section className="w-full h-500 bg-white px-10">
+    <section className="w-full h-400 bg-white px-10">
       <div className="w-full h-10 flex flex-row items-center mt-10">
         <div className="w-10 h-10 bg-blue-200 rounded-md flex justify-center items-center mr-3">
           <img src={briefcase} alt="briefcase icon" className="w-6 h-6" />
@@ -45,30 +45,44 @@ const WorkExperience = () => {
         <h2 className="font-semibold text-4xl">Work Experience</h2>
       </div>
       <div className="mt-10 flex flex-row">
-        <div className="w-1 h-150 bg-gray-300 relative">
-          <div className="w-4 h-4 bg-blue-700 absolute top-0 -left-1.5 rounded-full" />
+        <div className="w-1 h-330 bg-gray-300 relative">
+          <div className="w-4 h-4 bg-blue-700 absolute top-2 -left-1.5 rounded-full" />
+          <div className="w-4 h-4 bg-gray-500 absolute top-129 -left-1.5 rounded-full" />
+          <div className="w-4 h-4 bg-gray-500 absolute top-256 -left-1.5 rounded-full" />
         </div>
         <div className="flex-1 flex flex-col px-10">
           {DATA.map((item) => (
             <div className="flex flex-col w-full">
-              <div className="bg-blue-100 rounded-md px-4 py-1 w-33">
-                <p className="text-blue-700 font-semibold">{item.year}</p>
+              <div
+                className={`bg-blue-100 rounded-md px-4 py-1 flex justify-center w-40 ${
+                  item.year === "2022 - Present" ? "mt-0" : "mt-10"
+                }`}
+              >
+                <p
+                  className={`${
+                    item.year === "2022 - Present"
+                      ? "text-blue-700"
+                      : "text-gray-700"
+                  } font-semibold `}
+                >
+                  {item.year}
+                </p>
               </div>
               <h2 className="font-semibold text-xl mt-5">{item.title}</h2>
               <h3 className="font-bold text-gray-500 mt-1">{item.subTitle}</h3>
-              <div className="h-70 bg-gray-200 mt-10 rounded-xl p-2">
+              <div className="bg-gray-200 mt-10 rounded-xl p-5">
                 <p className="text-gray-600">{item.content}</p>
                 {item.additional?.map((add) => (
-                  <div className="flex flex-row">
+                  <div className="flex flex-row items-start mt-3">
                     <img
                       src={blueCheckMark}
                       alt="check mark"
-                      className="w-4 h-4"
+                      className="w-4 h-4 translate-y-1 mr-2"
                     />
-                    <p>{add}</p>
+                    <p className="text-gray-600">{add}</p>
                   </div>
                 ))}
-                <div className="flex flex-row gap-3">
+                <div className="flex flex-row gap-3 mt-3">
                   {item.tags.map((tag) => (
                     <p className="text-gray-600 bg-white px-2 py-0.5 rounded-md">
                       {tag}
