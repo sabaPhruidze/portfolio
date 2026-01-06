@@ -3,10 +3,29 @@ import { Link } from "react-router-dom";
 import menu from "../../assets/menu.png";
 import * as NavigationMenu from "@radix-ui/react-navigation-menu";
 
+interface Data {
+  to: string;
+  name: string;
+}
+
 const DropDownMenu = () => {
   const [value, setValue] = useState<string>(""); // გახსნა/დახურვის კონტროლი
 
   const closeMenu = () => setValue("");
+  const DATA: Data[] = [
+    {
+      to: "/",
+      name: "Home",
+    },
+    {
+      to: "/about",
+      name: "About",
+    },
+    {
+      to: "/projects",
+      name: "Projects",
+    },
+  ];
 
   return (
     <NavigationMenu.Root
@@ -20,43 +39,24 @@ const DropDownMenu = () => {
             <img src={menu} alt="symbol of menu" className="w-5 h-5" />
           </NavigationMenu.Trigger>
 
-          <NavigationMenu.Content className="p-2">
+          <NavigationMenu.Content className="p-2 ">
             <ul className="m-0 list-none w-48">
-              <li>
-                <NavigationMenu.Link asChild>
-                  <Link
-                    to="/"
-                    onClick={closeMenu}
-                    className="block px-3 py-2 rounded-md font-semibold text-gray-800 hover:bg-gray-100"
-                  >
-                    Home
-                  </Link>
-                </NavigationMenu.Link>
-              </li>
-
-              <li className="mt-1">
-                <NavigationMenu.Link asChild>
-                  <Link
-                    to="/about"
-                    onClick={closeMenu}
-                    className="block px-3 py-2 rounded-md font-semibold text-gray-800 hover:bg-gray-100"
-                  >
-                    About
-                  </Link>
-                </NavigationMenu.Link>
-              </li>
-
-              <li>
-                <NavigationMenu.Link asChild>
-                  <Link
-                    to="/projects"
-                    onClick={closeMenu}
-                    className="block px-3 py-2 rounded-md font-semibold text-gray-800 hover:bg-gray-100"
-                  >
-                    Projects
-                  </Link>
-                </NavigationMenu.Link>
-              </li>
+              {DATA.map((item) => (
+                <li
+                  className={`${item.to === "/" ? "" : "mt-1"}`}
+                  key={item.name}
+                >
+                  <NavigationMenu.Link asChild>
+                    <Link
+                      to={item.to}
+                      onClick={closeMenu}
+                      className="block px-3 py-2 rounded-md font-semibold text-gray-800 hover:bg-gray-100"
+                    >
+                      {item.name}
+                    </Link>
+                  </NavigationMenu.Link>
+                </li>
+              ))}
             </ul>
           </NavigationMenu.Content>
         </NavigationMenu.Item>
