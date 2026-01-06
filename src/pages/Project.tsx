@@ -1,7 +1,9 @@
+import Card from "../components/project/Card";
+
 const Project = () => {
   const show = ["All", "Web App", "Mobile", "Open Source", "Design System"];
   return (
-    <section className="w-full h-200 bg-gray-300 px-10">
+    <section className="w-full h-250 bg-gray-300 px-10">
       <h2 className="text-4xl font-bold pt-10">Featured Projects</h2>
       <p className="font-semibold text-gray-500 mt-5">
         building digital experiences with clean code and modern design. Here is
@@ -17,6 +19,7 @@ const Project = () => {
           </button>
         ))}
       </div>
+      <Card />
     </section>
   );
 };
