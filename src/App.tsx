@@ -6,6 +6,7 @@ import { Suspense, lazy } from "react";
 function App() {
   const Home = lazy(() => import("./pages/Home"));
   const About = lazy(() => import("./pages/About"));
+  const Project = lazy(() => import("./pages/Project"));
   return (
     <BrowserRouter>
       <Header />
@@ -13,6 +14,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
+          <Route path="/projects" element={<Project />} />
         </Routes>
       </Suspense>
       <Footer />

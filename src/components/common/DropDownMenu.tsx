@@ -45,6 +45,18 @@ const DropDownMenu = () => {
                   </Link>
                 </NavigationMenu.Link>
               </li>
+
+              <li>
+                <NavigationMenu.Link asChild>
+                  <Link
+                    to="/projects"
+                    onClick={closeMenu}
+                    className="block px-3 py-2 rounded-md font-semibold text-gray-800 hover:bg-gray-100"
+                  >
+                    Projects
+                  </Link>
+                </NavigationMenu.Link>
+              </li>
             </ul>
           </NavigationMenu.Content>
         </NavigationMenu.Item>
