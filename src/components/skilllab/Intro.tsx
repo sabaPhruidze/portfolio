@@ -1,12 +1,6 @@
-import fourCube from "../../assets/skillLab/4 cube.png";
-import advanced_theming_System from "../../assets/skillLab/advanced_theming_System.png";
-import drag_drop from "../../assets/skillLab/drag_drop.png";
 import experiment from "../../assets/skillLab/experiment.png";
-import infinite_scroll from "../../assets/skillLab/infinite_scroll.png";
 import interactive from "../../assets/skillLab/interactive.png";
 import play_button from "../../assets/skillLab/play-button.png";
-import right from "../../assets/skillLab/right.png";
-import sort from "../../assets/skillLab/sort.png";
 import star from "../../assets/skillLab/star.png";
 
 const Intro = () => {
@@ -84,7 +78,7 @@ const Intro = () => {
             <p className="font-bold text-white">Launch Demo</p>
           </button>
           <button className="bg-white border border-gray-300 py-4 w-full mb-3 flex flex-row justify-center items-center cursor-pointer rounded-xl">
-            <p className="font-bold scale-y-[1.5] -translate-y-0.5">
+            <p className="font-bold scale-y-[1.5] -translate-y-0.5 mr-2">
               &lt; &gt;
             </p>
             <p className="font-bold ">View Source</p>
