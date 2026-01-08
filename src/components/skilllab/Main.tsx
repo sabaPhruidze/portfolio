@@ -30,6 +30,42 @@ const Main = () => {
         </div>
         <img src={sort} alt="sorting icon" className="w-6 h-6" />
       </div>
+      <div className="w-full h-100 border border-gray-500 rounded-xl bg-white">
+        <img
+          src={drag_drop}
+          alt="drap drop image"
+          className="w-full h-40 object-cover rounded-t-xl"
+        />
+        <div className="px-5">
+          <div className="flex flex-row gap-3 py-5">
+            <div className="px-2 py-1 bg-blue-300 rounded-xl">
+              <p className="text-blue-700 font-semibold text-sm">React DnD</p>
+            </div>
+            <div className="px-2 py-1 bg-gray-200 rounded-xl">
+              <p className="font-semibold text-gray-700 text-sm">Sortable</p>
+            </div>
+          </div>
+          <h2 className="font-bold text-xl mb-5">Drag & Drop Kanban</h2>
+          <p>
+            A flud Drag-and-drop interface with optimistic updates and
+            accessible keyboard...
+          </p>
+          <div className="w-full h-0.5 bg-gray-300 my-3" />
+          <div className="flex flex-row justify-between">
+            <div className="flex flex-row">
+              <p className="mr-2 font-semibold">Try Demo</p>
+              <img
+                src={right}
+                alt="right icon"
+                className="w-4 h-4 translate-y-1"
+              />
+            </div>
+            <p className="font-bold scale-y-[1.5] -translate-y-0.5 mr-2 text-gray-500">
+              &lt; &gt;
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
   );
 };
