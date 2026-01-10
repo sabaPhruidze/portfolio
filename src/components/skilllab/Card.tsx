@@ -27,7 +27,7 @@ const Card = ({ DATA }: CardProps) => {
                       : tag.id === 3
                       ? "bg-blue-100"
                       : tag.id === 5
-                      ? "bg-orange-2s00"
+                      ? "bg-orange-200"
                       : "bg-gray-200"
                   }`}
                 >
