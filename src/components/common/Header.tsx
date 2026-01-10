@@ -1,14 +1,17 @@
 import moon from "../../assets/moon.png";
 import DropDownMenu from "./DropDownMenu";
+import { Link } from "react-router-dom";
 const Header = () => {
   return (
     <header className="w-full h-20 flex flex-row bg-white items-center px-5 justify-between">
       <section id="left-part" className="flex flex-row">
-        <div className="w-10 h-10 bg-blue-700 rounded-md flex justify-center items-center shadow-md shadow-blue-200">
-          <p className="text-white font-extrabold scale-y-[1.5] -translate-y-0.5">
-            &lt;&gt;
-          </p>
-        </div>
+        <Link to="/">
+          <div className="w-10 h-10 bg-blue-700 rounded-md flex justify-center items-center shadow-md shadow-blue-200">
+            <p className="text-white font-extrabold scale-y-[1.5] -translate-y-0.5">
+              &lt;&gt;
+            </p>
+          </div>
+        </Link>
         <h2 className="h-10 ml-3 translate-y-1.5 font-bold text-lg">SabaDev</h2>
       </section>
       <section

@@ -1,5 +1,3 @@
-import React, { useState } from "react";
-
 const Subscribe = () => {
   return (
     <section className="px-10 py-5 bg-blue-500 text-white rounded-xl">

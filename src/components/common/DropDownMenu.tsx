@@ -29,6 +29,10 @@ const DropDownMenu = () => {
       to: "./skills",
       name: "Skill Lab",
     },
+    {
+      to: "/contacts",
+      name: "Contact",
+    },
   ];
 
   return (

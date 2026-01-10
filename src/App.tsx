@@ -8,6 +8,7 @@ function App() {
   const About = lazy(() => import("./pages/About"));
   const Project = lazy(() => import("./pages/Project"));
   const SkillLab = lazy(() => import("./pages/SkillLab"));
+  const Contact = lazy(() => import("./pages/Contact"));
   return (
     <BrowserRouter>
       <Header />
@@ -17,6 +18,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/projects" element={<Project />} />
           <Route path="/skills" element={<SkillLab />} />
+          <Route path="/contacts" element={<Contact />} />
         </Routes>
       </Suspense>
       <Footer />
