@@ -6,6 +6,35 @@ import advanced_theming_System from "../../assets/skillLab/advanced_theming_Syst
 import drag_drop from "../../assets/skillLab/drag_drop.png";
 
 const Main = () => {
+  const DATA = [
+    {
+      id: 1,
+      src: drag_drop,
+      alt: "drap drop image",
+      tags: ["React DnD", "Sortable"],
+      title: "Drag & Drop Kanban",
+      content:
+        "  A flud Drag-and-drop interface with optimistic updates and accessible keyboard...",
+    },
+    {
+      id: 2,
+      src: advanced_theming_System,
+      alt: "advanced theming System image",
+      tags: ["Tailwind", "Context API"],
+      title: "Advanced Theming System",
+      content:
+        "System-preference aware dark mode toggle with local storage persistence and CSS...",
+    },
+    {
+      id: 3,
+      src: infinite_scroll,
+      alt: "infinite scroll image",
+      tags: ["React Query", "Intersection Observer"],
+      title: "Infinite Scroll Hook",
+      content:
+        "A custom hook for infinite loading with intersection observer, featuring loading...",
+    },
+  ];
   return (
     <section className="my-10">
       <div className="flex flex-row gap-3">
