@@ -1,6 +1,7 @@
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
+import arrowRight from "../../assets/contact/arrow-right.png";
 
 const getInTouchSchema = z.object({
   name: z
@@ -104,9 +105,14 @@ const InputBox = () => {
         </fieldset>
         <button
           type="submit"
-          className="px-5 py-2 bg-blue-600 text-white rounded-md mt-5 font-bold"
+          className="px-10 py-3 bg-blue-600 text-white rounded-md mt-5 font-bold flex flex-row gap-2"
         >
-          Send Message
+          <p className="">Send Message</p>
+          <img
+            src={arrowRight}
+            alt="right arrow icon"
+            className="w-4 h-4 translate-y-1"
+          />
         </button>
       </form>
     </section>
