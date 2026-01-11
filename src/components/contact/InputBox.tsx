@@ -20,27 +20,38 @@ const getInTouchSchema = z.object({
   message: z.string().trim().min(30, { message: "Write at least 30 letters" }),
 });
 
-const GetInTouchSchema = z.infer<typeof getInTouchSchema>;
+type GetInTouchSchema = z.infer<typeof getInTouchSchema>;
 
 const InputBox = () => {
+  const {
+    register,
+    handleSubmit,
+    formState: error,
+    reset,
+  } = useForm<GetInTouchSchema>({ resolver: zodResolver(getInTouchSchema) });
+
+  const onSubmit = (data: GetInTouchSchema) => {
+    console.log(data);
+  };
   return (
     <section className="bg-white rounded-xl px-5 py-8">
-      <form>
+      <form onSubmit={handleSubmit(onSubmit)}>
         {/* for better SEO */}
         <fieldset>
           <legend className="text-center font-bold text-xl">
             Contact information
           </legend>
-          <input type="text" />
-          <input type="email" />
+          <input type="text" {...register("name")} />
+          <input type="email" {...register("email")} />
         </fieldset>
         <fieldset>
           <legend className="text-center font-bold text-xl">
             Message Details
           </legend>
-          <input type="text" />
-          <input type="text" />
+          <input type="text" {...register("subject")} />
+          <input type="text" {...register("message")} />
         </fieldset>
+        <button type="submit">Send Message</button>
       </form>
     </section>
   );
