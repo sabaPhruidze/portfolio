@@ -20,6 +20,8 @@ const getInTouchSchema = z.object({
   message: z.string().trim().min(30, { message: "Write at least 30 letters" }),
 });
 
+const GetInTouchSchema = z.infer<typeof getInTouchSchema>;
+
 const InputBox = () => {
   return (
     <section className="bg-white rounded-xl px-5 py-8">
