@@ -55,8 +55,9 @@ const InputBox = () => {
             Name
           </label>
           <input
-            id="name"
             type="text"
+            id="name"
+            autoComplete="name"
             {...register("name")}
             className={inputClass}
             placeholder="Your Name"
@@ -66,8 +67,9 @@ const InputBox = () => {
             Email
           </label>
           <input
-            id="email"
             type="email"
+            id="email"
+            autoComplete="email"
             {...register("email")}
             className={inputClass}
             placeholder="your.email@example.com"
@@ -83,6 +85,7 @@ const InputBox = () => {
           </label>
           <input
             type="text"
+            autoComplete="on"
             id="subject"
             {...register("subject")}
             className={inputClass}
@@ -95,6 +98,8 @@ const InputBox = () => {
             Message
           </label>
           <textarea
+            autoComplete="off"
+            id="message"
             {...register("message")}
             className={`${inputClass} min-h-40`}
             placeholder="Write your message here..."
