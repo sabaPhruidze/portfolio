@@ -21,7 +21,7 @@ const Connect = () => {
     },
   ];
   return (
-    <section className="bg-white rounded-xl px-5 py-8 mt-10">
+    <section className="bg-white rounded-xl px-5 py-8 mt-10 lg:mt-5">
       <h2 className="font-bold text-xl md:text-2xl">Connect</h2>
       {DATA.map((item) => (
         <div className="flex flex-row" key={item.id}>

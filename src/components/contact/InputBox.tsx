@@ -47,7 +47,7 @@ const InputBox = () => {
     "w-full py-3 border border-gray-300 mt-2 rounded-md px-5 outline-none bg-gray-100";
   const errorClass = "mt-1 text-red-500";
   return (
-    <section className="bg-white rounded-xl px-5 py-8 mt-10">
+    <section className="bg-white rounded-xl px-5 py-8 mt-10 lg:max-w-2xl">
       <form onSubmit={handleSubmit(onSubmit)}>
         {/* for better SEO */}
         <fieldset>

@@ -5,11 +5,15 @@ import Connect from "../components/contact/Connect";
 import Location from "../components/contact/Location";
 const Contact = () => {
   return (
-    <div className="px-5 pt-10 bg-gray-100 h-500">
+    <div className="px-5 pt-10 bg-gray-100 h-500 xl:px-auto">
       <GetInTouch />
-      <InputBox />
-      <ContactDetails />
-      <Connect />
+      <div className="lg:flex lg:flex-row lg:gap-5">
+        <InputBox />
+        <div>
+          <ContactDetails />
+          <Connect />
+        </div>
+      </div>
       <Location />
     </div>
   );
