@@ -40,9 +40,9 @@ const InputBox = () => {
     console.log(data);
     reset();
   };
-  const legendClass = "text-center font-bold text-xl md:text-2xl ";
+  const legendClass = "text-center font-bold text-xl lg:text-2xl ";
   const labelClass =
-    "font-bold text-sm inline-block mt-5 cursor-pointer md:font-semibold md:text-lg";
+    "font-bold text-sm inline-block mt-5 cursor-pointer lg:font-semibold lg:text-lg";
   const inputClass =
     "w-full py-3 border border-gray-300 mt-2 rounded-md px-5 outline-none bg-gray-100";
   const errorClass = "mt-1 text-red-500";
@@ -52,7 +52,7 @@ const InputBox = () => {
         {/* for better SEO */}
         <fieldset>
           <legend className={legendClass}>Contact information</legend>
-          <div className="flex flex-col md:flex-row gap-3">
+          <div className="flex flex-col lg:flex-row gap-3">
             <div id="name-container" className="flex-1">
               <label htmlFor="name" className={labelClass}>
                 Name
@@ -121,11 +121,11 @@ const InputBox = () => {
           type="submit"
           className="cursor-pointer px-10 py-3 bg-blue-600 text-white rounded-md mt-5 font-bold flex flex-row gap-2"
         >
-          <p className="md:text-xl">Send Message</p>
+          <p className="lg:text-xl">Send Message</p>
           <img
             src={arrowRight}
             alt="right arrow icon"
-            className="w-4 h-4 translate-y-1 md:translate-y-2"
+            className="w-4 h-4 translate-y-1 lg:translate-y-2"
           />
         </button>
       </form>
