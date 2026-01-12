@@ -41,7 +41,7 @@ const InputBox = () => {
     reset();
   };
   const legendClass = "text-center font-bold text-xl";
-  const labelClass = "font-bold text-sm inline-block mt-5";
+  const labelClass = "font-bold text-sm inline-block mt-5 cursor-pointer";
   const inputClass =
     "w-full py-3 border border-gray-300 mt-2 rounded-md px-5 outline-none bg-gray-100";
   const errorClass = "mt-1 text-red-500";
@@ -105,7 +105,7 @@ const InputBox = () => {
         </fieldset>
         <button
           type="submit"
-          className="px-10 py-3 bg-blue-600 text-white rounded-md mt-5 font-bold flex flex-row gap-2"
+          className="cursor-pointer px-10 py-3 bg-blue-600 text-white rounded-md mt-5 font-bold flex flex-row gap-2"
         >
           <p className="">Send Message</p>
           <img
