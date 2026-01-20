@@ -1,13 +1,13 @@
 import character1 from "../../assets/character/character (1).png";
 import character2 from "../../assets/character/character (2).png";
 import character3 from "../../assets/character/character (3).png";
-
+import { Link } from "react-router-dom";
 import progress from "../../assets/growth.png";
 import checkmark from "../../assets/checkmark.png";
 const Introduction = () => {
   return (
-    <div className="w-full h-260 sm:h-250 bg-gray-300 py-20 px-10 flex flex-col md:items-center">
-      <section id="top" className="">
+    <div className="w-full h-260 sm:h-250 bg-gray-300 py-20 px-5 flex flex-col">
+      <section id="top">
         <div className="flex flex-row items-center bg-gray-400 p-2 rounded-full w-55 mb-5">
           <div className="w-2 h-2 animate-pulse bg-blue-800 rounded-full mr-2 translate-y-px" />
           <p className="text-blue-700 font-bold text-sm">
@@ -26,13 +26,19 @@ const Introduction = () => {
           bridge the gap between design and engineering with a focus on user
           experience
         </p>
-        <div className="flex flex-col items-start mt-8">
-          <button className="w-40 h-10 bg-blue-700 text-white font-bold rounded-md ">
+        <div className="flex flex-col items-start mt-8 md:flex-row gap-3">
+          <Link
+            to="/projects"
+            className="w-40 h-10 bg-blue-700 text-white font-bold rounded-md flex justify-center items-center"
+          >
             View My Work
-          </button>
-          <button className="border-x border-black w-40 h-10 bg-white text-black font-bold rounded-md shadow-2xl shadow-black mt-2">
+          </Link>
+          <Link
+            to="/contacts"
+            className="border-x border-black w-40 h-10 bg-white text-black font-bold rounded-md shadow-2xl shadow-black flex justify-center items-center md:shadow-white"
+          >
             Contact Me
-          </button>
+          </Link>
         </div>
         <div className="flex flex-row w-70  justify-between relative items-center h-12 mt-15">
           <div>
