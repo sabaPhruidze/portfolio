@@ -6,12 +6,12 @@ const About = () => {
   const data = [
     {
       id: 1,
-      title: "05+",
+      title: "02+",
       content: "Years Experience",
     },
     {
       id: 2,
-      title: "60+",
+      title: "30+",
       content: "Projects Done",
     },
     {
@@ -21,41 +21,43 @@ const About = () => {
     },
   ];
   return (
-    <section className="w-full h-300 bg-gray-300 py-20 px-10 ">
-      <div className="w-full h-250 bg-white rounded-xl px-5 xl:max-w-7xl xl:mx-auto">
-        <div className="flex flex-row items-center pt-5 xl:justify-center">
-          <img src={user} alt="user icon" className="w-5 h-5 mr-3" />
-          <h2 className="font-bold text-blue-600"> ABOUT ME</h2>
-        </div>
-        <div>
-          <h3 className="text-3xl mt-5 font-bold">
-            Bridging the Gap between engineering and design
-          </h3>
-          <p className="text-gray-500 mt-5 md:w-160">
-            I'm a passionate developer with over 3 years of experience in
-            building digital products. I specialize in the JavaScript ecosystem
-            but love exploring new technologies . My goal is to create software
-            that is not only functional but also intuitive and delightful to
-            use. I thrive in collaborative environments and enjoy mentoring
-            junior developers
-          </p>
-        </div>
-        <div className="flex flex-row my-5 justify-around">
-          {data.map((items) => (
-            <div
-              key={items.id}
-              className="w-full h-25 bg-gray-200 flex flex-col px-1.5 sm:px-3 mr-3 rounded-xl  sm:h-35 sm:justify-center sm:flex sm:items-center"
-            >
-              <h4 className="text-blue-500 text-xl font-bold mb-2 sm:text-2xl">
-                {items.title}
-              </h4>
-              <p className="text-gray-500 font-semibold text-sm sm:text-md">
-                {items.content}
-              </p>
-            </div>
-          ))}
-        </div>
-        <div>
+    <section className="w-full h-330 sm:h-300 md:h-220 bg-gray-300 py-20 px-10 ">
+      <div className="w-full h-280 sm:h-250 md:h-170 bg-white rounded-xl px-5 xl:max-w-7xl xl:mx-auto md:flex md:flex-row md:justify-between md:items-center">
+        <div className="md:w-[60%]">
+          <div className="flex flex-row items-center pt-5 xl:justify-center">
+            <img src={user} alt="user icon" className="w-5 h-5 mr-3" />
+            <h2 className="font-bold text-blue-600"> ABOUT ME</h2>
+          </div>
+          <div>
+            <h3 className="text-3xl mt-5 font-bold">
+              Bridging the Gap between engineering and design
+            </h3>
+            <p className="text-gray-500 mt-5 md:w-100">
+              I’m a Full-Stack Web Developer with 2+ years of commercial
+              experience, building modern web products with React and Next.js.
+              Over the past few years, I’ve worked on real client projects and
+              long-term collaborations, taking ownership of everything from
+              front-end UI to back-end logic, API integration, and content/image
+              management. Alongside web development, I also create mobile
+              applications using React Native (Expo), helping businesses deliver
+              a consistent experience across platforms.
+            </p>
+          </div>
+          <div className="flex flex-row my-5 gap-3 justify-around">
+            {data.map((items) => (
+              <div
+                key={items.id}
+                className="w-full h-25 bg-gray-200 flex flex-col sm:px-3 mr-3 rounded-xl  sm:h-35 sm:justify-center sm:flex sm:items-center"
+              >
+                <h4 className="text-blue-500 text-xl font-bold mb-2 sm:text-2xl">
+                  {items.title}
+                </h4>
+                <p className="text-gray-500 font-semibold text-sm sm:text-md">
+                  {items.content}
+                </p>
+              </div>
+            ))}
+          </div>
           <Link to="./" className="font-bold text-blue-500 flex flex-row">
             Read full biography
             <img
@@ -64,13 +66,13 @@ const About = () => {
               className="w-4 h-4 translate-y-1 ml-2"
             />
           </Link>
-          <div className="w-full h-90 flex justify-center">
-            <img
-              src={imageMain}
-              alt="main image"
-              className="h-80 object-contain rounded-full mt-4"
-            />
-          </div>
+        </div>
+        <div className="w-full h-90 flex justify-center">
+          <img
+            src={imageMain}
+            alt="main image"
+            className="h-80 object-contain rounded-full mt-4"
+          />
         </div>
       </div>
     </section>
