@@ -2,38 +2,11 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import menu from "../../assets/menu.png";
 import * as NavigationMenu from "@radix-ui/react-navigation-menu";
-
-interface Data {
-  to: string;
-  name: string;
-}
-
+import { menuData } from "../../data/Menu";
 const DropDownMenu = () => {
   const [value, setValue] = useState<string>(""); // გახსნა/დახურვის კონტროლი
 
   const closeMenu = () => setValue("");
-  const DATA: Data[] = [
-    {
-      to: "/",
-      name: "Home",
-    },
-    {
-      to: "/about",
-      name: "About",
-    },
-    {
-      to: "/projects",
-      name: "Projects",
-    },
-    {
-      to: "/skills",
-      name: "Skill Lab",
-    },
-    {
-      to: "/contacts",
-      name: "Contact",
-    },
-  ];
 
   return (
     <NavigationMenu.Root
@@ -49,7 +22,7 @@ const DropDownMenu = () => {
 
           <NavigationMenu.Content className="p-2 ">
             <ul className="m-0 list-none w-48">
-              {DATA.map((item) => (
+              {menuData.map((item) => (
                 <li
                   className={`${item.to === "/" ? "" : "mt-1"}`}
                   key={item.name}
