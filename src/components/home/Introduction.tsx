@@ -7,7 +7,7 @@ import checkmark from "../../assets/checkmark.png";
 const Introduction = () => {
   return (
     <div className="w-full h-260 sm:h-250 bg-gray-300 py-20 px-10 flex flex-col md:items-center">
-      <section id="top">
+      <section id="top" className="">
         <div className="flex flex-row items-center bg-gray-400 p-2 rounded-full w-55 mb-5">
           <div className="w-2 h-2 animate-pulse bg-blue-800 rounded-full mr-2 translate-y-px" />
           <p className="text-blue-700 font-bold text-sm">
