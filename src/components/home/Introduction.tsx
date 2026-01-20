@@ -6,7 +6,7 @@ import progress from "../../assets/growth.png";
 import checkmark from "../../assets/checkmark.png";
 const Introduction = () => {
   return (
-    <div className="w-full h-250 bg-gray-300 py-20 px-10 flex flex-col md:items-center">
+    <div className="w-full h-260 sm:h-250 bg-gray-300 py-20 px-10 flex flex-col md:items-center">
       <section id="top">
         <div className="flex flex-row items-center bg-gray-400 p-2 rounded-full w-55 mb-5">
           <div className="w-2 h-2 animate-pulse bg-blue-800 rounded-full mr-2 translate-y-px" />
@@ -79,7 +79,7 @@ const Introduction = () => {
         </div>
 
         <div className="w-45 h-20 shadow-xl shadow-dark rounded-xl flex flex-row items-center justify-between px-5 mt-15">
-          <div className="">
+          <div>
             <div className="flex flex-row items-end">
               <p className="font-bold text-gray-300 text-sm mr-1">
                 PERFORMANCE

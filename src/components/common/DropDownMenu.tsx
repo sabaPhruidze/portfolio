@@ -26,7 +26,7 @@ const DropDownMenu = () => {
       name: "Projects",
     },
     {
-      to: "./skills",
+      to: "/skills",
       name: "Skill Lab",
     },
     {

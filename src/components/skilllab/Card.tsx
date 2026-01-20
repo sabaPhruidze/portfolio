@@ -25,21 +25,22 @@ const Card = ({ DATA }: CardProps) => {
                     tag.id === 1
                       ? "bg-blue-200"
                       : tag.id === 3
-                      ? "bg-blue-100"
-                      : tag.id === 5
-                      ? "bg-orange-200"
-                      : "bg-gray-200"
+                        ? "bg-blue-100"
+                        : tag.id === 5
+                          ? "bg-orange-200"
+                          : "bg-gray-200"
                   }`}
+                  key={tag.id}
                 >
                   <p
                     className={`font-semibold text-sm ${
                       tag.id === 1
                         ? "text-blue-700"
                         : tag.id === 3
-                        ? "text-blue-500"
-                        : tag.id === 5
-                        ? "text-orange-700"
-                        : "text-gray-700"
+                          ? "text-blue-500"
+                          : tag.id === 5
+                            ? "text-orange-700"
+                            : "text-gray-700"
                     }`}
                   >
                     {tag.name}

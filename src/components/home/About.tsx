@@ -44,7 +44,7 @@ const About = () => {
           {data.map((items) => (
             <div
               key={items.id}
-              className="w-full h-25 bg-gray-200 flex flex-col px-3 mr-3 rounded-xl  sm:h-35 sm:justify-center sm:flex sm:items-center"
+              className="w-full h-25 bg-gray-200 flex flex-col px-1.5 sm:px-3 mr-3 rounded-xl  sm:h-35 sm:justify-center sm:flex sm:items-center"
             >
               <h4 className="text-blue-500 text-xl font-bold mb-2 sm:text-2xl">
                 {items.title}

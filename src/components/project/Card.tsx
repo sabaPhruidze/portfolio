@@ -28,7 +28,10 @@ const Card = ({ DATA }: CardProps) => {
             <div>
               <div className="flex flex-row gap-3 mt-3">
                 {item.tag.map((ta) => (
-                  <p className="text-gray-700 bg-gray-200 px-2 py-0.5 rounded-md">
+                  <p
+                    className="text-gray-700 bg-gray-200 px-2 py-0.5 rounded-md"
+                    key={ta}
+                  >
                     {ta}
                   </p>
                 ))}

@@ -38,7 +38,7 @@ const Education = () => {
   return (
     <section className="w-full h-100 bg-gray-300 px-10 ">
       {DATA.map((item) => (
-        <>
+        <div key={item.title}>
           <div className="flex flex-row pt-10">
             <img
               src={item.mainImageSrc}
@@ -57,7 +57,7 @@ const Education = () => {
               <p className=" text-sm text-gray-500">{item.year}</p>
             </div>
           </div>
-        </>
+        </div>
       ))}
     </section>
   );
