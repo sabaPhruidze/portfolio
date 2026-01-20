@@ -2,12 +2,11 @@ import character1 from "../../assets/character/character (1).png";
 import character2 from "../../assets/character/character (2).png";
 import character3 from "../../assets/character/character (3).png";
 import { Link } from "react-router-dom";
-import progress from "../../assets/growth.png";
-import checkmark from "../../assets/checkmark.png";
+import Performance from "./Performance";
 const Introduction = () => {
   return (
-    <div className="w-full h-260 sm:h-250 bg-gray-300 py-20 px-5 flex flex-col">
-      <section id="top">
+    <div className="w-full h-260 sm:h-250 bg-gray-100 py-20 px-5 flex flex-col">
+      <section>
         <div className="flex flex-row items-center bg-gray-400 p-2 rounded-full w-55 mb-5">
           <div className="w-2 h-2 animate-pulse bg-blue-800 rounded-full mr-2 translate-y-px" />
           <p className="text-blue-700 font-bold text-sm">
@@ -22,9 +21,11 @@ const Introduction = () => {
           React.js & React native developer
         </h2>
         <p className="text-gray-500 mt-4 sm:w-150">
-          Building accessible, pixel-perfect, and performant web experiences . I
-          bridge the gap between design and engineering with a focus on user
-          experience
+          I’m a Full-Stack Web Developer with 2+ years of commercial experience
+          building high-performance products with React and Next.js. I care
+          about speed, structure, and search visibility—clean UI on the surface,
+          solid APIs and maintainable logic underneath. I also build apps with
+          React Native (Expo).
         </p>
         <div className="flex flex-col items-start mt-8 md:flex-row gap-3">
           <Link
@@ -40,7 +41,7 @@ const Introduction = () => {
             Contact Me
           </Link>
         </div>
-        <div className="flex flex-row w-70  justify-between relative items-center h-12 mt-15">
+        <div className="flex flex-row w-70 justify-between relative items-center h-12 mt-15 ">
           <div>
             <img
               src={character2}
@@ -64,53 +65,7 @@ const Introduction = () => {
           </div>
         </div>
       </section>
-      <section
-        id="bottom"
-        className="w-full h-80 bg-white mt-15 rounded-xl p-10 shadow-xl shadow-dark md:w-170"
-      >
-        <div className="flex justify-end">
-          <div className="w-45 h-20 shadow-xl shadow-dark rounded-xl flex flex-row items-center justify-between px-5 animate-[bounce_3s_infinite]">
-            <div className="w-8 h-8 rounded-full bg-green-200 flex justify-center items-center">
-              <img
-                src={checkmark}
-                alt="check mark"
-                className="w-5 h-5 rounded-full"
-              />
-            </div>
-            <div>
-              <p className="font-bold text-gray-300 text-sm">System Status</p>
-              <p className="font-bold text-green-600">Operational</p>
-            </div>
-          </div>
-        </div>
-
-        <div className="w-45 h-20 shadow-xl shadow-dark rounded-xl flex flex-row items-center justify-between px-5 mt-15">
-          <div>
-            <div className="flex flex-row items-end">
-              <p className="font-bold text-gray-300 text-sm mr-1">
-                PERFORMANCE
-              </p>
-              <img
-                src={progress}
-                alt="progress icon"
-                className="w-4 h-4 rounded-full"
-              />
-            </div>
-            <div className="mt-3">
-              <div className="w-full h-2 bg-gray-200 overflow-hidden rounded-full">
-                <div className="h-full w-[90%] bg-blue-600 rounded-full"></div>
-              </div>
-            </div>
-
-            <div className="flex flex-row items-center">
-              <p className="font-bold text-gray-300 text-sm mr-1">
-                Optimization
-              </p>
-              <p className="font-bold"> 98%</p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <Performance />
     </div>
   );
 };
